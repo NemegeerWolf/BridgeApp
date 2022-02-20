@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BridgeApp.Views.ResultaatPagina">
+    <ContentPage.Content>
+        <Grid Margin="0 , 10 ,0 ,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Column="1" Orientation="Horizontal" Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand">
+                <StackLayout HorizontalOptions="CenterAndExpand" >
+                    <Label Text="Noord_Zuid" FontSize="Title" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    <ListView x:Name="lstvPuntenNoord_Zuid" HorizontalOptions="CenterAndExpand">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Label Text="{Binding}" VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    
+                    <!--<Label x:Name="lblPuntenNoord_Zuid" VerticalOptions="CenterAndExpand"/>-->
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                        <Label Text="Totaal: " HorizontalOptions="Start"/>
+                        <Label x:Name="lblScoreNoord_Zuid" VerticalOptions="CenterAndExpand" HorizontalOptions="Start"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" >
+                    <Label Text="Oost_West" FontSize="Title" HorizontalOptions="CenterAndExpand"/>
+                    <ListView x:Name="lstvPuntenOost_West" HorizontalOptions="CenterAndExpand">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Label Text="{Binding}" VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <!--<Label x:Name="lblPreScoreOost_West"/>
+                    <Label x:Name="lblPuntenOost_West"/>-->
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                        <Label Text="Totaal: " HorizontalOptions="StartAndExpand"/>
+                        <Label x:Name="lblScoreOost_West" HorizontalOptions="StartAndExpand"/>
+                    </StackLayout>
+                </StackLayout>
+
+            </StackLayout>
+            <Button Grid.Column="1" x:Name="btnNext" Clicked="btnNext_Clicked" Grid.Row="1" Text="Next" TextColor="#1062E5" BorderColor="#1062E5" BorderWidth="2" BackgroundColor="Transparent" WidthRequest="200" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

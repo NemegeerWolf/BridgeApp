@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BridgeApp.MainPage">
+
+    <StackLayout BackgroundColor="Black" WidthRequest="400">
+        <ScrollView Orientation="Horizontal" WidthRequest="400" VerticalOptions="FillAndExpand">
+            <Grid VerticalOptions="FillAndExpand"  RowSpacing="2" ColumnSpacing="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="{x:OnIdiom Phone= 60}"/>
+                    <ColumnDefinition Width="{x:OnIdiom Phone= 60}"/>
+                    <ColumnDefinition Width="{x:OnIdiom Phone= 100}"/>
+                    <ColumnDefinition Width="{x:OnIdiom Phone= 100}"/>
+                    <ColumnDefinition Width="{x:OnIdiom Phone= 100}"/>
+                    <ColumnDefinition Width="{x:OnIdiom Phone= 100}"/>
+                    <ColumnDefinition Width="{x:OnIdiom Phone= 100}"/>
+                    <ColumnDefinition Width="{x:OnIdiom Phone= 20}"/>
+                    <ColumnDefinition Width="{x:OnIdiom Phone= 100}"/>
+                    <ColumnDefinition Width="{x:OnIdiom Phone= 100}"/>
+                    <ColumnDefinition Width="{x:OnIdiom Phone= 20}"/>
+                    <ColumnDefinition Width="{x:OnIdiom Phone= 100}"/>
+                    <ColumnDefinition Width="{x:OnIdiom Phone= 100}"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="*"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                
+                </Grid.RowDefinitions>
+                <Frame BackgroundColor="Yellow" Grid.ColumnSpan="14"/> 
+                <Label Padding="8" Text="Spel 1" TextColor="Black" Grid.Row="0" Grid.ColumnSpan="2"  FontAttributes="Bold" FontSize="Title" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" Text="voor 8 paren" TextColor="Black" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="5"  FontSize="Title" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" Text="Score" TextColor="Black" Grid.Row="0" Grid.Column="8" Grid.ColumnSpan="2"  FontSize="Title" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" Text="Punten" TextColor="Black" Grid.Row="0" Grid.Column="11" Grid.ColumnSpan="2"  FontSize="Title" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+                <Label Padding="8" TextColor="Black" Text="N-Z" BackgroundColor="Wheat" Grid.Column="0" Grid.Row="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="O-W" BackgroundColor="Wheat" Grid.Column="1" Grid.Row="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="Leider" BackgroundColor="Wheat" Grid.Column="2" Grid.Row="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="Contract" BackgroundColor="Wheat" Grid.Column="3" Grid.Row="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="DBL" BackgroundColor="Wheat" Grid.Column="4" Grid.Row="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="Re-DBL" BackgroundColor="Wheat" Grid.Column="5" Grid.Row="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="Resultaat" BackgroundColor="Wheat" Grid.Column="6" Grid.Row="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="N-Z" BackgroundColor="Wheat" Grid.Column="8" Grid.Row="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="O-W" BackgroundColor="Wheat" Grid.Column="9" Grid.Row="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="N-Z" BackgroundColor="Wheat" Grid.Column="11" Grid.Row="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="O-W" BackgroundColor="Wheat" Grid.Column="12" Grid.Row="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+                <Label Padding="8" TextColor="Black" Text="1" BackgroundColor="White" Grid.Column="0" Grid.Row="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="3" BackgroundColor="White" Grid.Column="0" Grid.Row="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="5" BackgroundColor="White" Grid.Column="0" Grid.Row="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="7" BackgroundColor="White" Grid.Column="0" Grid.Row="5" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            
+                <Label Padding="8" TextColor="Black" Text="2" BackgroundColor="White" Grid.Column="1" Grid.Row="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="4" BackgroundColor="White" Grid.Column="1" Grid.Row="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="6" BackgroundColor="White" Grid.Column="1" Grid.Row="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="8" BackgroundColor="White" Grid.Column="1" Grid.Row="5" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+                <!--Column Leider -->
+                <Picker  TextColor="Black"  BackgroundColor="White" Grid.Column="2" Grid.Row="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                    <Picker.Items Padding="200">
+                        <x:String> Noord</x:String>
+                        <x:String> Oost</x:String>
+                        <x:String> Zuid</x:String>
+                        <x:String> West</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Picker  TextColor="Black" BackgroundColor="White" Grid.Column="2" Grid.Row="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                    <Picker.Items>
+                        <x:String>Noord</x:String>
+                        <x:String>Oost</x:String>
+                        <x:String>Zuid</x:String>
+                        <x:String>West</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Picker  TextColor="Black" BackgroundColor="White" Grid.Column="2" Grid.Row="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                    <Picker.Items>
+                        <x:String>Noord</x:String>
+                        <x:String>Oost</x:String>
+                        <x:String>Zuid</x:String>
+                        <x:String>West</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Picker  TextColor="Black" BackgroundColor="White" Grid.Column="2" Grid.Row="5" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                    <Picker.Items>
+                        <x:String>Noord</x:String>
+                        <x:String>Oost</x:String>
+                        <x:String>Zuid</x:String>
+                        <x:String>West</x:String>
+                    </Picker.Items>
+                </Picker>
+
+
+                <!--Column Contract-->
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="3" Grid.Row="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="3" Grid.Row="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="3" Grid.Row="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="3" Grid.Row="5" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+                <!--Column DBL-->
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="4" Grid.Row="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="4" Grid.Row="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="4" Grid.Row="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="4" Grid.Row="5" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+                <!--Column Re-DBL-->
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="5" Grid.Row="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="5" Grid.Row="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="5" Grid.Row="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="5" Grid.Row="5" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+                <!--Column Resultaat-->
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="6" Grid.Row="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="6" Grid.Row="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="6" Grid.Row="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="6" Grid.Row="5" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+                <!--Column Score1-->
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="8" Grid.Row="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="8" Grid.Row="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="8" Grid.Row="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="8" Grid.Row="5" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+                <!--Column Score2-->
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="9" Grid.Row="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="9" Grid.Row="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="9" Grid.Row="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="9" Grid.Row="5" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+                <!--Column Punten1-->
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="11" Grid.Row="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="11" Grid.Row="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="11" Grid.Row="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="11" Grid.Row="5" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+                <!--Column Punten2-->
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="12" Grid.Row="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="12" Grid.Row="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="12" Grid.Row="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Padding="8" TextColor="Black" Text="" BackgroundColor="White" Grid.Column="12" Grid.Row="5" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+            </Grid>
+        </ScrollView>
+    </StackLayout>
+
+</ContentPage>

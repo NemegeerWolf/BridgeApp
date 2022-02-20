@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BridgeApp.Views.StartPagina" 
+             NavigationPage.HasBackButton="True"
+             Title="Setup">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackLayout Orientation="Horizontal"  Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Label Text="Verloren punten geven aan ander team."/>
+                <Switch x:Name="swPuntenAanTegenstander" IsToggled="false" ThumbColor="#00A9FD" OnColor="LightBlue" VerticalOptions="Start"/>
+            </StackLayout>
+            <Button x:Name="btnNext" Clicked="btnNext_Clicked" Grid.Row="1" Text="Next" TextColor="#1062E5" BorderColor="#1062E5" BorderWidth="2" BackgroundColor="Transparent" WidthRequest="200" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <!--<Picker>
+                <Picker.Items>
+                    <x:String>h</x:String>
+                </Picker.Items>
+            </Picker>
+            <Entry></Entry>
+            <RadioButton/>-->
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
